@@ -13,6 +13,10 @@ extern YYSTYPE yylval;
 
 %}
 
+
+
+
+
 num [0-9]
 lettre [a-zA-Z]
 unsigned_int {num}+ 
@@ -113,4 +117,5 @@ printf("ligne %d : signed_int reconnu   %s \n" , nb_ligne,yytext ); Col=Col+strl
 
 
 . printf("Erreur lexicale ligne %d colonne %d sur l'entite %s\n",nb_ligne,Col,yytext);
+
 %%
