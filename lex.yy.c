@@ -124,6 +124,7 @@ extern FILE *yyin, *yyout;
 #define yyless(n) \
 	do \
 		{ \
+
 		/* Undo effects of setting up yytext. */ \
 		*yy_cp = yy_hold_char; \
 		YY_RESTORE_YY_MORE_OFFSET \
@@ -133,6 +134,8 @@ extern FILE *yyin, *yyout;
 	while ( 0 )
 
 #define unput(c) yyunput( c, yytext_ptr )
+
+		
 
 /* The following is because we cannot portably get our hands on size_t
  * (without autoconf's help, which isn't available because we want
@@ -170,6 +173,8 @@ struct yy_buffer_state
 	 * each newline.
 	 */
 	int yy_is_interactive;
+
+
 
 	/* Whether we're considered to be at the beginning of a line.
 	 * If so, '^' rules will be active on the next match, otherwise
@@ -1841,3 +1846,4 @@ int main()
 	}
 #endif
 #line 116 "rayan.l"
+
