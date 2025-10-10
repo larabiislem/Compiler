@@ -19,6 +19,9 @@ typedef struct qdr{
 
 
 
+
+
+
 void quadruplet(char opr[],char op1[],char op2[],char res[])
 {
 
@@ -70,6 +73,7 @@ void ajout_quad_opbinaire(char op , float *opa,float * opb)
             case '-': quadruplet("-",ope1,ope2,"<tmporaire>");break;
             case '*': quadruplet("*",ope1,ope2,"<tmporaire>");  break;
             case '/': quadruplet("+",ope1,ope2,"<tmporaire>"); break;
+				
             }
             
 }
@@ -87,5 +91,7 @@ void ajout_quad_affect_val(char entite[],float *val){
 
                sprintf(ope1,"%f",*val);
                quadruplet("=",ope1,"",entite)  ;
+	
 }
+
 
